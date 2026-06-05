@@ -13,4 +13,4 @@ bonus = salary * bonus_rate
 
 print("\nEmployee Bonus Infomation")
 print("Last Name:", last_name)
-print("Bonus: $", formt (bonus, ".2f"))
+print("Bonus: $", format (bonus, ".2f"))
