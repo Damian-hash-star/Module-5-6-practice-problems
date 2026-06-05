@@ -1,16 +1,18 @@
-part = input("Enter part number: ")
-quantity = int(input("Enter quantity: "))
+principal = float(input("Enter the principal amount: $"))
+years = int(input("Enter years to maturity: "))
 
-if part == "10" or part == "55":
-  unit_cost = 1.00
-elif part == "99":
-  unit_cost = 2.00
-elif part == "80" or part == "70":
-  unit_cost = 3.00
+if principal > 100000 and years == 5:
+  interest_rate = 0.06
+elif 50000 <= principal <= 100000 and years == 10:
+  interest_rate = 0.05
+elif 50000 <= principal <= 100000 and years == 5:
+  interest_rate = 0.04
 else:
-  unit_cost = 5.00
+  interest_rate = 0.02
 
-total_cost = quantity * unit_cost
-print("Part Numberr:", part)
-print("Cost per Unit: $", format(unit_cost, ".2f"))
-print("Total Cost: $", format(total_cost, ".2f"))
+interest_amount = principal * interest_rate
+
+print("\nCD Information")
+print(f"Principal Amount: ${principal:,.2f}")
+print(f"Interest Rate: {interest_rate:.0%}")
+print(f"First Year Interest: ${interest_amount:,.2f}")
